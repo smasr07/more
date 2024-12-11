@@ -1,0 +1,227 @@
+#include <algorithm>
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <ctime>
+#include <array>
+#include <cctype>
+#include <bits/ranges_algo.h>
+
+using namespace std;
+/*bool strictlyEqual(const int list1[], const int list2[], int size) {
+    if (size <= 0) {
+        return false;
+    }
+    for (int i = 0; i < size; i++) {
+        if (list1[i] != list2[i]) {
+            return false;
+        }
+    }
+
+    return true;
+}
+int main() {
+    int size;
+    cin >> size;
+    int list1[size];
+    int list2[size];
+    for (int i = 0; i < size; i++) {
+        cin >> list1[i];
+    }
+    for (int i = 0; i < size; i++) {
+        cin >> list2[i];
+    }
+    if (strictlyEqual(list1, list2, size)) {
+        cout << "The arrays are strictly equal." << endl;
+    } else {
+        cout << "The arrays are not strictly equal." << endl;
+    }
+    return 0;
+}
+*/
+/*int main() {
+     int n;
+     cin >> n;
+    char characters[n];
+    int upppercasecount = 0, lowercasecount = 0, digitcount = 0, speacialcount = 0;
+     for (int i = 0; i < n; i++) {
+         cin >> characters[i];
+     }
+    for (int i = 0; i < n; i++) {
+        if (isupper(characters[i])) {
+            upppercasecount++;
+        } else if (islower(characters[i])) {
+           lowercasecount++;
+        } else if (isdigit(characters[i])) {
+           digitcount++;
+        } else {
+            speacialcount++;
+        }
+    }
+    cout << upppercasecount << lowercasecount << digitcount << speacialcount << endl;
+
+}*/
+/*int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    sort(arr, arr + n);
+    for (int n: arr) {
+        cout << n << setw(3);
+    }
+}*/
+/*int main() {
+    srand(time(0));
+    int count1 = 0, count2 =0, count3 = 0, count4 = 0, count5 = 0, count6 = 0;
+    int arr[] = {1, 2, 3, 4, 5, 6};
+    for (int i = 0; i < 10000; i++) {
+        int randomNumber = rand() % 6;
+        if (arr[randomNumber] == 1) {
+            count1++;
+        }
+        if (arr[randomNumber] == 2) {
+            count2++;
+        }
+        if (arr[randomNumber] == 3) {
+            count3++;
+        }
+        if (arr[randomNumber] == 4) {
+            count4++;
+        }
+        if (arr[randomNumber] == 5) {
+            count5++;
+        }
+        if (arr[randomNumber] == 6) {
+            count6++;
+        }
+
+    }
+    cout << count1 << " " << count2 << " " << count3 << " " << count4 << " " << count5 << " " << count6 << " " << endl;
+
+}*/
+/*void reversearray(int arr[], int start, int end) {
+    while (start < end) {
+        int temp = arr[end];
+        arr[end] = arr[start];
+        arr[start] = temp;
+        start++;
+        end--;
+    }
+}
+int main() {
+    int n;
+    cin >> n;
+    int arr[n];
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+    }
+    reversearray(arr, 0, n - 1);
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}*/
+
+/*int main() {
+    int n;
+    cin >> n;
+    bool prime = true;
+    for (int i = 1; i < n; i++) {
+        for (int j = 2; j < i; j++) {
+            if (n % j == 0) {
+                prime = false;
+            }
+        }
+    }
+    if (prime) {
+        cout << " Prime " <<endl;
+    }else {cout << " Not Prime" <<endl;}
+}*/
+/*const int Size= 4;
+double sumColumn(const double m[][Size], int RowSize, int ColumnIndex) {
+    double sum = 0;
+    for (int row = 0; row < RowSize; row++) {
+        sum += m[row][Size];
+    }
+    return sum;
+}
+int main() {
+    double matrix[5][Size] = {
+        {5, 3, 1, 6},
+        {-5, 2, 1, 5},
+        {6, 6, 1, 6},
+        {-3, 11, 2, 55},
+        {0, 4, 0, 4}
+    };
+
+    for (int col = 1; col <= 5; ++col) {
+        double columnSum = sumColumn(matrix, 5, col);
+        cout << "sum of column " << col << "=" << columnSum << endl;
+    }
+
+    return 0;
+}*/
+
+/*int main() {
+    // Declare and initialize a 2D array (3 rows and 4 columns)
+    int matrix[3][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12}
+    };
+
+    // Print the elements of the matrix
+    for (int i = 0; i < 3; i++) { // Loop through rows
+        for (int j = 0; j < 4; j++) { // Loop through columns
+            cout << matrix[i][j] << " "; // Print each element
+        }
+        cout << endl; // Move to the next row
+    }
+
+    return 0;
+}
+*/
+/*int main() {
+    int a[4][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};
+    cout << a[3][1] << endl;
+}
+*/
+/*const int SIZE = 4;
+double sumMajorDiagonal(const double m[][SIZE]) {
+    double sum = 0;
+    for (int i = 0; i < SIZE; i++) {
+        sum += m[i][i];
+    }
+    return sum;
+}
+int main() {
+    double matrix[SIZE][SIZE];
+
+    for (int i = 0; i < SIZE; i++) {
+        for (int j = 0; j < SIZE; j++) {
+
+            cin >> matrix[i][j];
+        }
+    }
+    cout << sumMajorDiagonal( matrix);
+}*/
+
+/*int factorial(int a) {
+    if (a == 0 )
+        return 1;
+    else
+
+    return a * factorial (a - 1);
+}
+int main() {
+    int a;
+    cin >> a;
+    cout << factorial(a);
+}*/
+
+
+
+
